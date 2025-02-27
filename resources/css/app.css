@@ -1,0 +1,445 @@
+/* Styling untuk navbar */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Navbar modern */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.toggle-btn {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Tombol lingkaran di dalam toggle */
+.toggle-btn::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle aktif */
+.toggle-btn.active {
+    background-color: #4caf50;
+}
+
+.toggle-btn.active::before {
+    left: calc(100% - 28px); /* Menggeser lingkaran ke kanan */
+}
+
+/* Efek hover */
+.toggle-btn:hover {
+    background-color: #bbb;
+}
+
+.toggle-btn.active:hover {
+    background-color: #45a049;
+}
+
+/* Fokus untuk aksesibilitas */
+.toggle-btn:focus {
+    outline: 2px solid #4caf50;
+    outline-offset: 3px;
+}
+
+/* Gaya teks jika digunakan untuk icon atau label */
+.toggle-btn-text {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 10px;
+    user-select: none;
+}
+
+/* Gaya tambahan untuk membuat toggle lebih menarik dengan icon */
+.toggle-btn-icon {
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+/* Gaya Menu (tampil pada layar besar) */
+#menu {
+    display: flex; /* Menampilkan menu di layar besar */
+    flex-direction: row;
+    margin-left: auto;
+}
+
+#menu li {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+#menu li a {
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#menu li a:hover {
+    background-color: #555;
+}
+
+/* Toggle Button (Tersembunyi di layar besar) */
+.toggle-btn {
+    display: none; /* Hanya tampil pada layar kecil */
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn.active {
+    background-color: #4caf50;
+}
+
+.toggle-btn.active::before {
+    left: calc(100% - 28px);
+}
+
+.toggle-btn:hover {
+    background-color: #bbb;
+}
+
+.toggle-btn.active:hover {
+    background-color: #45a049;
+}
+
+/* Menu dalam keadaan tersembunyi pada layar kecil */
+#menu.hidden {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 4%;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Menu Aktif pada layar kecil */
+#menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styling modern untuk konten */
+.content {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Chart container */
+.chart-container {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.chart {
+    width: 22%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.sensor-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sensor-table th,
+.sensor-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.sensor-table th {
+    background-color: #4facfe;
+    color: white;
+    font-weight: 600;
+}
+
+.danger-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Agar lebih fleksibel saat layar kecil */
+}
+
+.danger-warning,
+.danger-information {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 48%; /* Membuat konten memiliki lebar yang sama */
+}
+
+.danger-warning {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+
+.danger-warning.safe {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.danger-warning.visible {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out; /* Animasi saat muncul */
+}
+
+.danger-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.danger-information.danger {
+    background-color: #f8d7da; /* Warna merah saat kondisi bahaya */
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.danger-information.safe {
+    background-color: #d4edda; /* Warna hijau saat kondisi aman */
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.danger-information .emoji {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.danger-information .conditionText {
+    font-size: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .chart {
+        width: 100%;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #4facfe;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .toggle-btn {
+        width: 50px;
+        height: 25px;
+        display: inline-block;
+    }
+    .toggle-btn::before {
+        width: 20px;
+        height: 20px;
+    }
+    .toggle-btn.active::before {
+        left: calc(100% - 22px);
+    }
+
+    .danger-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .danger-warning,
+    .danger-information {
+        width: 90%;
+    }
+
+    #menu {
+        display: none; /* Sembunyikan menu pada layar kecil */
+        margin-top: 25px;
+        background-color: #fff;
+    }
+
+    #menu li a {
+        color: #007bff;
+    }
+
+    #menu li a:hover {
+        color: #fff;
+    }
+
+    #menu.hidden {
+        display: none;
+    }
+
+    #menu.active {
+        display: flex;
+        flex-direction: column;
+        top: 40px;
+    }
+}
+
+/* Footer modern */
+footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 5px solid #4facfe;
+}
+
+footer a {
+    color: #4facfe;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
