@@ -1,66 +1,223 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Hospital Air Quality Monitoring 🏥🌿
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+An IoT-based hospital air quality monitoring system designed to monitor and assess indoor environmental conditions in real time.
 
-## About Laravel
+This project was developed as a web-based monitoring platform for **RSUD Dr. Soedomo Trenggalek**, providing a digital interface for monitoring environmental conditions within hospital areas.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* 🌡️ Real-time environmental monitoring
+* 💨 Air quality monitoring
+* 🌡️ Temperature monitoring
+* 💧 Humidity monitoring
+* 📊 Environmental condition visualization
+* 🚦 Air quality status assessment
+* 🏥 Hospital-focused monitoring
+* 📱 Responsive web interface
+* 🗄️ Database integration
+* 📈 Historical environmental data
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🎯 Project Overview
 
-## Learning Laravel
+**Hospital Air Quality Monitoring** is a web-based monitoring system designed to help monitor indoor environmental conditions in a hospital environment.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The system collects environmental data from connected sensors and presents the information through a web-based dashboard, allowing users to observe changes in environmental conditions and identify potentially unhealthy conditions.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🏥 Project Location
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**RSUD Dr. Soedomo Trenggalek**
 
-## Laravel Sponsors
+Trenggalek, East Java, Indonesia.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🏗️ System Architecture
 
-### Premium Partners
+```text
+Environmental Sensors
+        │
+        ▼
+   IoT Controller
+        │
+        ▼
+ Data Collection
+        │
+        ▼
+ Backend / Database
+        │
+        ▼
+ Web Monitoring Dashboard
+        │
+        ▼
+ Environmental Status
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## 📊 Monitoring
 
-## Contributing
+The system is designed to monitor important indoor environmental parameters such as:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Parameter       | Purpose                             |
+| --------------- | ----------------------------------- |
+| 🌡️ Temperature | Monitor indoor temperature          |
+| 💧 Humidity     | Monitor indoor humidity             |
+| 💨 Air Quality  | Assess environmental air conditions |
 
-## Code of Conduct
+The monitored values can be presented through the web dashboard to make environmental conditions easier to understand.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🖥️ Web Dashboard
 
-## Security Vulnerabilities
+The web application provides a centralized interface for displaying environmental monitoring data.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+The dashboard can be used to:
 
-## License
+* View current environmental conditions
+* Monitor air quality status
+* Review environmental measurements
+* Observe changes in monitored parameters
+* Support environmental monitoring activities
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🛠️ Technologies
+
+### Backend
+
+* PHP
+* Laravel
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+* Vite
+
+### Database
+
+* MySQL
+
+### IoT
+
+* Microcontroller
+* Environmental Sensors
+
+## 📂 Project Structure
+
+```text
+Hospital-Air-Quality-Monitoring/
+│
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+├── routes/
+├── storage/
+├── tests/
+│
+├── .env.example
+├── artisan
+├── composer.json
+├── package.json
+├── phpunit.xml
+├── vite.config.js
+└── README.md
+```
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/AnantaR07/Hospital-Air-Quality-Monitoring.git
+cd Hospital-Air-Quality-Monitoring
+```
+
+### 2. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### 3. Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure Environment
+
+Copy the example environment file:
+
+```bash
+cp .env.example .env
+```
+
+Generate the Laravel application key:
+
+```bash
+php artisan key:generate
+```
+
+### 5. Configure Database
+
+Update the database configuration inside `.env`:
+
+```env
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+### 6. Run Database Migration
+
+```bash
+php artisan migrate
+```
+
+### 7. Start Laravel
+
+```bash
+php artisan serve
+```
+
+### 8. Start Vite
+
+```bash
+npm run dev
+```
+
+## 🎯 Project Objectives
+
+The main objectives of this project are:
+
+* Digitize hospital environmental monitoring
+* Provide real-time environmental information
+* Make air quality conditions easier to observe
+* Support early identification of unhealthy environmental conditions
+* Provide a centralized web-based monitoring interface
+
+## 🔮 Future Improvements
+
+Possible future improvements include:
+
+* 📱 Mobile application
+* 🔔 Real-time notifications
+* 📲 Telegram or WhatsApp alerts
+* 📈 Advanced monitoring charts
+* 🤖 Automatic air quality classification
+* 📊 Monitoring reports
+* 👥 Multi-user authentication
+* 🏥 Multi-room monitoring
+* ☁️ Cloud-based IoT infrastructure
+* 📡 MQTT communication
+* 🚨 Automatic warning system
+
+## 📌 Project Status
+
+**Completed — IoT & Web Development Portfolio Project**
+
+## 👨‍💻 Author
+
+**Ananta Romadhan**
+
+Junior Full Stack Developer | IoT Engineer
+
+GitHub: https://github.com/AnantaR07
